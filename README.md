@@ -1,35 +1,51 @@
 # 🪔 Diwali Sales Pulse 2022–2025
-### DataCliq – Skills Wali Diwali Data Analytics Challenge 2026
+### 🥇 1st Place — DataCliq Skills Wali Diwali Data Analytics Challenge 2026
 
 ## 📌 Project Overview
 
-Diwali Sales Pulse is a multi-page Power BI dashboard developed as part of the **DataCliq – Skills Wali Diwali Data Analytics Challenge 2026**.
+Diwali Sales Pulse is a multi-page, Diwali-themed Power BI dashboard built for the **DataCliq – Skills Wali Diwali Data Analytics Challenge 2026**, where it won **1st place among 50+ participants**.
 
-The project analyses Diwali sales data from 2022 to 2025 to understand sales trends, product performance, customer behaviour, regional contributions, campaign effectiveness, and revenue leakage.
+It analyses 40,000+ raw retail orders across four Diwali seasons (2022–2025) to understand sales trends, product performance, customer behaviour, regional contribution, discount and campaign impact, and revenue leakage.
 
-## 🎯 Project Objectives
+## 🔍 Key Insights
 
-- Analyse sales trends across four Diwali seasons.
-- Identify top-performing product categories and regions.
-- Understand customer purchasing behaviour.
-- Evaluate campaign and discount performance.
-- Analyse order cancellations, returns, and revenue leakage.
-- Generate actionable business insights and recommendations.
+- **Growth stalled in 2025:** revenue grew strongly from 2022 to 2024, then dipped about 2% in 2025, with orders down about 3%.
+- **Sweets lead on revenue, but not on margin:** Decor & Pooja (~48%) and Chocolates (~44%) earn higher margins than Dry Fruits (~29%).
+- **Discounts burn margin:** profit margin falls from ~42% (no discount) to ~17% (30% discount), while revenue peaks at around 10% discount.
+- **The North region leads:** North contributes about 40% of realised revenue, nearly four times Central.
+- **~16% of revenue leaks:** about ₹1.21 Cr (cancellations and returns combined) is lost, and the rate is similar across categories, channels and regions, which points to a systemic issue.
+- **Diwali demand is a plateau, not a spike:** the week before Diwali is only about 5% above the baseline.
+- **Campaigns showed no clear lift:** orders without a campaign sold about as much as campaign orders.
+
+## 💡 Recommendations
+
+- Cap discounts near 10% and protect margin on Dry Fruits.
+- Investigate the cancellation and return process, since the leakage is broad-based rather than tied to one segment.
+- Re-test campaign design, and build pre-Diwali peaks instead of relying on a flat season.
+- Invest in the North and in under-penetrated regions such as Central and East.
+
+## 🧹 Data Cleaning & Modelling
+
+- Removed 118 exact duplicate rows (40,000 → 39,882) and kept shared Order IDs by using a composite order key.
+- Rebuilt order dates from the Diwali day offset because the raw dates came in mixed formats (dd/mm and mm/dd).
+- Standardised category, channel, payment and city values (for example Bangalore → Bengaluru), and recovered missing states from cities.
+- Separated **Realised Revenue** (Delivered + In Transit) from **Lost Revenue** (Cancelled + Returned) instead of reporting raw net sales.
+- Built a star schema with a custom date table (including Diwali-aligned fields) and a dedicated measures table.
 
 ## 🛠️ Tools & Technologies
 
-- **Power BI** – Dashboard development and data visualisation
-- **Power Query** – Data cleaning and transformation
-- **DAX** – Measures and calculations
-- **Excel** – Dataset exploration
+- **Power BI** – dashboard development and storytelling
+- **Power Query** – data cleaning and transformation
+- **DAX** – measures, time intelligence, dynamic calculations
+- **Excel** – dataset exploration
 
 ## 📊 Dashboard Pages
 
-1. **Executive Overview** – Overall sales performance and key business metrics.
-2. **Diwali Countdown** – Sales trends before and around Diwali.
-3. **Products & Campaigns** – Product category and campaign performance.
-4. **Customers & Regions** – Customer segments, sales channels, and regional analysis.
-5. **Operations** – Order cancellations, returns, delivery performance, and revenue leakage.
+1. **Executive Overview** – overall sales performance and key business metrics.
+2. **Diwali Countdown** – sales trends in the days before and after Diwali.
+3. **Products & Campaigns** – category, discount and campaign performance.
+4. **Customers & Regions** – segments, channels and regional analysis.
+5. **Operations** – cancellations, returns, delivery performance and revenue leakage.
 
 ## 🖼️ Dashboard Preview
 
@@ -39,44 +55,33 @@ The project analyses Diwali sales data from 2022 to 2025 to understand sales tre
 ### Executive Overview
 ![Executive Page](Screenshots/Executive%20Page.png)
 
-## 🔍 Key Insights
-
-- Sweets contributed the largest share of sales.
-- The North region recorded the highest regional contribution.
-- Approximately 16% of revenue was lost through cancellations and returns.
-- Discount and campaign performance varied across product categories.
-- Delivery performance and shipping costs presented opportunities for operational improvement.
-
 ## 📁 Repository Structure
 
 ```text
 DataCliq-Diwali-Data-Analytics-Challenge/
-│
+├── Assets/
+│   └── GitHub_Cover_1280x640.png
 ├── Dashboard/
 │   └── Diwali_Sales_Pulse.pdf
-│
 ├── Screenshots/
 │   ├── Home.png
 │   └── Executive Page.png
-│
 └── README.md
 ```
 
 ## 📄 Dashboard Access
 
-The dashboard PDF is available in this repository for viewing.
+The dashboard PDF is available in the `Dashboard/` folder.
 
-**Power BI File (.pbix):** Available on request. Please feel free to contact me if you would like to explore the interactive dashboard or review the Power BI implementation.
+**Power BI file (.pbix):** available on request. Feel free to contact me to explore the interactive dashboard or the Power BI implementation.
 
 ## 🙏 Acknowledgement
 
-Thank you to **DataCliq** for organising the Skills Wali Diwali Data Analytics Challenge 2026 and providing an opportunity to learn, analyse, and showcase data analytics skills.
-
----
+Thank you to **DataCliq** for organising the Skills Wali Diwali Data Analytics Challenge 2026.
 
 ## 👨‍💻 Author
 
-**Piyush Dave**
+**Piyush Dave** — Data Analyst
 
 - [GitHub](https://github.com/PiyushDave30)
 - [LinkedIn](https://linkedin.com/in/piyushdave30)
